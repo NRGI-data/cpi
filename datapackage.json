@@ -1,35 +1,67 @@
 {
-  "name": "cpi-test1",
-  "title": "Annual Consumer Price Index (CPI)",
-  "description": "Annual Consumer Price Index (CPI) for most countries in the world. Reference year is 2005.",
-  "keywords": [ "CPI", "World", "Consumer Price Index", "Annual Data", "The World Bank"],
-  "version": "2.0.0",
-  "last_updated": "2014-09-22",
   "resources": [
     {
-      "path": "data/cpi.csv",
+      "name": "cpi-long",
+      "path": "data/cpi-long.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 181801,
+      "schema": {
+        "fields": [
+          {
+            "name": "iso2c",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "cpi",
+            "type": "number",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "cpi.bak",
+      "path": "data/cpi.bak.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "bytes": 240435,
       "schema": {
         "fields": [
           {
             "name": "Country Name",
-            "type": "string"
+            "type": "string",
+            "description": ""
           },
           {
             "name": "Country Code",
-            "type": "string"
+            "type": "string",
+            "description": ""
           },
           {
             "name": "Year",
             "type": "integer",
-            "format": "yyyy"
+            "description": ""
           },
           {
             "name": "CPI",
-            "description": "CPI (where 2005=100)", 
-            "type": "number"
+            "type": "number",
+            "description": ""
           }
-	]
+        ]
       }
     }
-  ]
+  ],
+  "name": "cpi",
+  "title": "",
+  "description": "Annual Consumer Price Index (CPI) for most countries in the world when it has been measured. The reference year is 2005 (meaning the value of CPI for all countries is 100 and all other CPI values are relative to that year)",
+  "homepage": "",
+  "version": "0.1.0",
+  "license": "ODC-PDDL-1.0"
 }
